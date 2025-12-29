@@ -1,0 +1,10 @@
+-r base.txt
+
+# Production server
+gunicorn>=23.0
+
+# Security
+django-cors-headers>=4.3
+
+# Static files
+whitenoise>=6.6

@@ -1,0 +1,39 @@
+# .gitignore
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files (SECRETS - Never push!)
+.env
+.env.prod
+.env.local
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Static files (generated)
+staticfiles/
+
+# Media files (user uploads)
+media/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

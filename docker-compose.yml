@@ -1,0 +1,17 @@
+services:
+    web:
+      build: . # yahan . lagaya hua hai
+      container_name: django_app    
+      ports:                        
+        - "8000:8000"
+      volumes:
+        - ./db.sqlite3:/app/db.sqlite3
+        - ./media:/app/media
+      
+      environment:
+        - DEBUG= True
+        - SECRET_KEY= dev-secret-key-for-testing-only
+        - ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0,*
+      
+      restart: unless-stopped
+

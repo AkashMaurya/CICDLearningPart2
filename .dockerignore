@@ -1,0 +1,32 @@
+# .dockerignore
+
+#virtual enviroment
+.venv/  #ye error nahi hai 
+venv/
+
+#git
+
+.git
+.gitignore
+
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+
+
+# IDE
+.vscode/
+.idea/
+
+# Environment files (secrets)
+.env
+.env.prod
+
+
+# Logs
+*.log
+
+# Local database (SQLite) - optional
+# db.sqlite3
