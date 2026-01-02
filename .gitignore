@@ -3,18 +3,15 @@
 # Virtual environment
 .venv/
 venv/
-env/
 
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
-# Environment files (SECRETS - Never push!)
+# Environment files (SECRETS!)
 .env
 .env.prod
-.env.local
 
 # Database
 *.sqlite3
@@ -23,17 +20,17 @@ db.sqlite3
 # Static files (generated)
 staticfiles/
 
-# Media files (user uploads)
-media/
+# Media files
+media/*
+!media/.gitkeep
 
 # IDE
 .vscode/
 .idea/
-*.swp
 
 # Logs
 *.log
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
