@@ -12,11 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # Step 1: Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
       
-      # Step 2: Deploy to AWS via SSH
       - name: Deploy to AWS Server
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -26,14 +24,15 @@ jobs:
           script: |
             cd ~/CICDLearningPart2
             
-            echo "📥 Pulling latest code..."
-            git pull origin main
+            echo "📥 Resetting local changes..."
+            git fetch origin main
+            git reset --hard origin/main
             
             echo "🛑 Stopping old containers..."
             docker-compose down
             
             echo "🔨 Building new images..."
-            docker-compose build
+            docker-compose build --no-cache
             
             echo "🚀 Starting containers..."
             docker-compose up -d
